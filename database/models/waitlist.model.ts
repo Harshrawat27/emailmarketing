@@ -18,7 +18,8 @@ const WaitlistSchema = new Schema({
   firstName: { type: String }, // Optional field
 });
 
-// If the Waitlist model doesn't exist yet, create it
-const Waitlist = models.Waitlist || model('Waitlist', WaitlistSchema);
+// Force the collection name to be 'waitlist' instead of the default plural 'waitlists'
+const Waitlist =
+  models.Waitlist || model('Waitlist', WaitlistSchema, 'waitlist');
 
 export default Waitlist;
