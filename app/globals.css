@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/preflight';
+@import 'tailwindcss/utilities';
 
 @layer base {
   :root {
@@ -70,7 +69,7 @@
   }
 }
 
-@layer base {
+@layer default {
   * {
     @apply border-border;
   }
@@ -80,6 +79,7 @@
   }
 }
 
+/* These styles are now outside layers in Tailwind v4 */
 table {
   width: 100%;
   border-collapse: collapse;
